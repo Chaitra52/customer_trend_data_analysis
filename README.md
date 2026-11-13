@@ -1,53 +1,130 @@
 # Customer Shopping Behavior Analysis
 
-## Project Overview
-An end-to-end data analytics project focused on understanding customer shopping behavior for a retail company. The project analyzes purchasing patterns, customer preferences, product performance, and factors influencing buying decisions to derive actionable business insights.
+## 1. Project Overview
 
-## Business Problem
-A leading retail company aims to understand changes in customer purchasing behavior across demographics, product categories, and shopping channels (online and offline).
+An end-to-end data analytics project focused on understanding customer shopping behavior for a leading retail company. The project aims to identify purchasing patterns, customer preferences, product performance and factors influencing buying decisions to generate actionable business insights.
 
-The objective is to identify how discounts, product reviews, seasonal trends, and payment preferences influence purchasing decisions and customer loyalty.
+The analysis uses Python for data cleaning and feature engineering, SQL for business analysis, and Power BI for interactive dashboard development.
 
-## Project Objectives
-- Analyze customer demographics and purchasing patterns.
-- Identify popular product categories and shopping preferences.
-- Understand the impact of discounts and review ratings on purchasing behavior.
-- Analyze payment preferences and shopping channels.
-- Generate insights to support customer engagement and marketing strategies.
+## 2. Business Problem
 
-## Tools & Technologies
-- **Python:** Data cleaning, preprocessing and exploratory data analysis.
-- **SQL Server:** Data analysis and business query execution.
-- **Power BI:** Interactive dashboard development and visualization.
-- **Jupyter Notebook:** Python-based analysis.
+A leading retail company wants to better understand its customers' shopping behavior to improve sales, customer satisfaction and long-term customer loyalty.
 
-## Project Workflow
+The management team has observed changes in purchasing patterns across demographics, product categories and sales channels (online versus offline).
 
-**1. Data Cleaning & Exploration – Python**
-- Cleaned and transformed the raw dataset.
-- Handled missing values and data inconsistencies.
-- Performed exploratory data analysis.
+The objective is to understand how factors such as discounts, product reviews, seasonal trends and payment preferences influence customer purchasing decisions and customer loyalty.
 
-**2. Data Analysis – SQL**
-- Structured and analyzed customer shopping data.
-- Executed SQL queries to identify customer trends, product preferences and purchasing patterns.
-- Extracted business insights through analytical queries.
+## 3. Project Objectives
 
-**3. Data Visualization – Power BI**
-- Developed an interactive dashboard.
-- Visualized customer demographics, purchasing behavior, product categories and key business metrics.
+- Analyze customer demographics and shopping patterns.
+- Identify popular products and product categories.
+- Evaluate the relationship between discounts and purchasing behavior.
+- Understand customer subscription patterns and loyalty.
+- Analyze revenue and sales distribution across different customer segments.
+- Generate actionable insights to support marketing strategies and customer engagement.
 
-## Key Deliverables
-- Python notebook for data cleaning and exploration.
-- SQL scripts for business analysis.
-- Power BI dashboard for interactive visualization.
-- Original customer shopping behavior dataset.
+## 4. Tools & Technologies
 
-## Key Insights
-[Add 3–5 actual findings from your analysis.]
+| Technology | Purpose |
+|---|---|
+| Python | Data cleaning, transformation and feature engineering |
+| Pandas | Data manipulation and preprocessing |
+| Jupyter Notebook | Exploratory data analysis |
+| SQL Server | Business analysis and data querying |
+| Power BI | Interactive dashboard and visualization |
+| GitHub | Project documentation and version control |
 
-## Business Recommendations
-[Add actionable recommendations based on your findings.]
+## 5. Project Workflow
+
+### A. Data Cleaning & Exploration – Python
+
+Performed data preparation and exploratory data analysis using Python.
+
+**Key activities:**
+
+- Checked the dataset for missing and null values.
+- Imputed missing values in the review rating column using the median review rating of the respective product category.
+- Standardized column names using snake_case for improved readability and consistency.
+- Created an age_group column to categorize customers based on age.
+- Created a purchase_frequency_days column to capture purchase frequency information.
+- Dropped the promo_code_used column during data preparation.
+
+**Deliverable:** `data cleaning and exploration.ipynb`
+
+### B. Data Analysis – SQL
+
+Used SQL Server to analyze customer shopping behavior and answer key business questions.
+
+**Business Questions & Analysis:**
+
+1. What is the total revenue generated by male versus female customers?
+2. Which customers used a discount but still spent more than the average purchase amount?
+3. Which are the top five products with the highest average review ratings?
+4. How do average purchase amounts compare between standard and express shipping?
+5. Do subscribed customers spend more than non-subscribed customers? Compare average spending and total revenue between both groups.
+6. Which five products have the highest percentage of purchases with discounts applied?
+7. How can customers be segmented into new, returning and loyal customers based on their total number of previous purchases? What is the customer count in each segment?
+8. What are the top three most purchased products within each product category?
+9. Are repeat buyers more likely to subscribe? What is the revenue contribution of each group?
+
+**Deliverable:** `data analysis.sql`
+
+### C. Data Visualization – Power BI
+
+Developed an interactive Customer Behavior Dashboard to analyze customer demographics, purchasing patterns, product category performance and subscription behavior.
+
+**Key Performance Indicators (KPIs):**
+
+- Total Number of Customers
+- Average Purchase Amount
+- Average Review Rating
+
+**Dashboard Visualizations:**
+
+| Visualization | Business Focus |
+|---|---|
+| Customer Distribution by Subscription Status | Percentage of subscribed and non-subscribed customers |
+| Review Ratings by Category | Customer satisfaction across product categories |
+| Sales by Category | Product category performance |
+| Revenue by Age Group | Revenue contribution across customer age groups |
+| Sales by Age Group | Purchasing patterns across different age groups |
+
+**Interactive Filters (Slicers):**
+
+- Subscription Status (Yes / No)
+- Gender (Female / Male)
+- Product Category (Accessories, Clothing, Footwear and Outerwear)
+- Shipping Type
+
+These interactive filters allow stakeholders to explore customer segments and compare purchasing patterns across different dimensions.
+
+**Deliverable:** `data visualization and insights.pbix`
+
+## 8. Repository Structure
+
+```text
+Customer-Shopping-Behavior-Analysis/
+│
+├── customer_shopping_behavior.csv
+├── data cleaning and exploration.ipynb
+├── data analysis.sql
+├── data visualization and insights.pbix
+├── problem statement.md
+└── README.md
+```
+
+## How to Run the Project
+
+1. Clone or download the GitHub repository.
+2. Open the Python notebook using Jupyter Notebook.
+3. Install the required Python libraries.
+4. Execute the notebook to perform data cleaning and feature engineering.
+5. Import the prepared dataset into SQL Server.
+6. Execute the SQL scripts to reproduce the business analysis.
+7. Open the Power BI file to explore the interactive dashboard.
 
 ## Conclusion
-The project demonstrates an end-to-end data analytics approach, transforming raw customer data into meaningful insights to support data-driven business decisions, improve customer engagement and optimize retail strategies.
+
+This project demonstrates an end-to-end data analytics workflow, transforming raw customer shopping data into structured information, analytical insights and interactive visualizations.
+
+The analysis provides a foundation for understanding customer purchasing behavior, identifying valuable customer segments and supporting data-driven decisions to improve customer engagement and optimize retail strategies.
