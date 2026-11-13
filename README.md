@@ -1,5 +1,3 @@
-# customer_trend_data_analysis
-
 # Customer Shopping Behavior Analysis
 
 ## Project Overview
